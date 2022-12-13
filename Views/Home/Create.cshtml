@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="Title">
+    <h1>Create a new lead</h1>
+    <i>Add as much information as you can about the lead, the more you have, the better you can organize it.</i>
+</div>
+<br />
+
+@*To add a picture of the property of to add a PDF off propertyshark*@
+<form action="/action_page.php">
+    <p>Upload an Image of the property</p>
+    <input type="file" id="myFile" name="filename">
+    <br />
+
+    <br />
+    @*    To add details for the property below to create lead*@
+    @*Adding mortgage amount*@
+    <div class="form-group">
+        <label for="Mortgage">Mortgage size</label>
+        <select id="mortgageAmount" name="mortgageAmount">
+            <option value="none">None</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <small id="Mortgage" class="form-text text-muted">About how big is the mortgage?</small>
+    </div>
+    <br />
+    @*Taxes owed input*@
+    <div class="form-group">
+        <label for="taxesOwed">Amount of Taxes Owed</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="e.g. $30000:">
+    </div>
+    <br />
+    @*Adding Type of property*@
+    <div class="form-group">
+        <label for="propertyType">Property Type</label>
+        <select id="propertyType" name="PropertyType">
+            <option value="1 family">1 family</option>
+            <option value="2 family">2 family</option>
+            <option value="3 family">3 family</option>
+            <option value="Multifamily">4 family</option>
+            <option value="lot">Lot</option>
+            <option value="ResidentalCommerical">Res + Com</option>
+            <option value="Commerical">Commerical</option>
+        </select>
+    </div>
+    <br />
+    @*Adding Property Number*@
+    <div class="form-group">
+        <label for="propertyNum">Property Number</label>
+        <input type="text" class="form-control" id="propertyNum" placeholder="e.g. 151">
+    </div>
+    <br />
+    @*Adding Property Street Name*@
+    <div class="form-group">
+        <label for="propertyStreet">Property Street</label>
+        <input type="text" class="form-control" id="propertyStreet" placeholder="e.g. Cooper Street">
+    </div>
+    <br />
+    @*Adding Property City*@
+    <div class="form-group">
+        <label for="propertyCity">Property City</label>
+        <input type="text" class="form-control" id="propertyCity" placeholder="e.g. Brooklyn">
+    </div>
+    <br />
+    @*Adding Property Zipcode*@
+    <div class="form-group">
+        <label for="propertyZipcode">Property Zipcode</label>
+        <input type="text" class="form-control" id="propertyZipcode" placeholder="e.g. 11207">
+    </div>
+    <br />
+    @*Adding Property Owners*@
+    <div class="form-group">
+        <label for="propertyOwner">Property Owner</label>
+        <input type="text" class="form-control" id="propertyOwners" placeholder="Add the last owner you see from the deed.">
+    </div>
+    <br />
+    @*Adding Property Owner's age*@
+    <div class="form-group">
+        <label for="propertyOwnerAge">Owner's Age</label>
+        <input type="text" class="form-control" id="propertyOwnerAge" placeholder="input all the ages of the owners in order by owner.">
+    </div>
+    <br />
+    @*Adding Property Phone Number*@
+    <div class="form-group">
+        <label for="propertyOwnerPhone">Owners Phone Number</label>
+        <input type="text" class="form-control" id="propertyOwnerphone" placeholder="Write all the phone numbers connected with the owner.">
+    </div>
+    <br />
+    @*Adding Property Tax Name*@
+    <div class="form-group">
+        <label for="propertyTaxName">Property Tax Name</label>
+        <input type="text" class="form-control" id="propertyTaxName" placeholder="Who's name is on the tax bill?">
+    </div>
+    <br />
+    @*Adding Property Tax Address*@
+
+    <div class="form-group">
+        <label for="propertyTaxAddress">PropertyTaxAddress</label>
+        <input type="text" class="form-control" id="propertyTaxAddress" placeholder="Where does the taxes go to?">
+    </div>
+    <br />
+
+    @*Adding notes*@
+    <div class="form-group">
+        <label for="propertyNotes">Property Notes</label>
+        <input type="text" class="form-control" id="propertyNotes" placeholder="Add a new note">
+    </div>
+    <br />
+
+    @*Submit Button*@
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
